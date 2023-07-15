@@ -24,10 +24,10 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ url('products') }}">{{ __('Product') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('Event') }}</a>
+                            <a class="nav-link" href="{{ route('products.create') }}">{{ __('Create product') }}</a>
                         </li>
                     </ul>
                 </div>
