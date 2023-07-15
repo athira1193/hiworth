@@ -15,7 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product_list');
+        $product = Product::latest()->with('variant')->get();
+
+        return view('product_list',['product'=>$product]);
     }
 
     /**

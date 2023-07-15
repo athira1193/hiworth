@@ -282,6 +282,23 @@
     <main class="py-4">
         <div class="container">
             <div class="row">
+                @foreach($product as $value)
+                    @php
+                        $sizes = [];
+                        $colors = [];
+                        $price = [];
+                        $quantity = [];
+                        foreach ($value->variant as $item) {
+                          $sizes[] = $item['size'];
+                          $colors[] = $item['color'];
+                          $price[] = $item['price'];
+                          $quantity[] = $item['quantity'];
+                        }
+                        $sizes = implode(', ', $sizes);
+                        $colors = implode(', ', $colors);
+                       $price = implode(', ', $price);
+//                        $quantity = implode(', ', $quantity);
+                    @endphp
 
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <article class="card-wrapper">
@@ -295,18 +312,16 @@
                             <!-- title -->
                             <h1 class="product-description__title">
                                 <a href="#">
-                                    Adidas Originals
+                                    {{$value->name}}
                                 </a>
                             </h1>
 
                             <!-- category and price -->
                             <div class="row">
                                 <div class="col-xs-12 col-sm-8 product-description__category secondary-text">
-                                    Men's running shirt
+                                    {{$value->description}}
                                 </div>
-                                <div class="col-xs-12 col-sm-4 product-description__price">
-                                    € 499
-                                </div>
+                       
                             </div>
 
                             <!-- divider -->
@@ -318,13 +333,8 @@
                                 <br />
                                 <span class="secondary-text text-uppercase">
 							<ul class="list-inline">
-								<li>xs,</li>
-								<li>s,</li>
-								<li>sm,</li>
-								<li>m,</li>
-								<li>l,</li>
-								<li>xl,</li>
-								<li>xxl</li>
+								<li>{{ $sizes }}</li>
+
 							</ul>
 						</span>
                             </div>
@@ -333,207 +343,16 @@
                             <div class="color-wrapper">
                                 <b>Colors</b>
                                 <br />
-                                <ul class="list-inline color-list">
-                                    <li class="color-list__item color-list__item--red"></li>
-                                    <li class="color-list__item color-list__item--blue"></li>
-                                    <li class="color-list__item color-list__item--green"></li>
-                                    <li class="color-list__item color-list__item--orange"></li>
-                                    <li class="color-list__item color-list__item--purple"></li>
+                                <ul class="list-inline ">
+                                    <li>{{ $colors }}</li>
                                 </ul>
                             </div>
                         </div>
 
                     </article>
                 </div>
+                @endforeach
 
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <article class="card-wrapper">
-                        <div class="image-holder">
-                            <a href="#" class="image-holder__link"></a>
-                            <div class="image-liquid image-holder--original" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Jeans_BW_2_(3213391837).jpg/543px-Jeans_BW_2_(3213391837).jpg')">
-                            </div>
-                        </div>
-
-                        <div class="product-description">
-                            <!-- title -->
-                            <h1 class="product-description__title">
-                                <a href="#">
-                                    Adidas Originals
-                                </a>
-                            </h1>
-
-                            <!-- category and price -->
-                            <div class="row">
-                                <div class="col-sm-8 product-description__category secondary-text">
-                                    Men's running shirt
-                                </div>
-                                <div class="col-sm-4 product-description__price text-right">
-                                    € 499
-                                </div>
-                            </div>
-
-                            <!-- divider -->
-                            <hr />
-
-                            <!-- sizes -->
-                            <div class="sizes-wrapper">
-                                <b>Sizes</b>
-                                <br />
-                                <span class="secondary-text text-uppercase">
-							<ul class="list-inline">
-								<li>xs,</li>
-								<li>s,</li>
-								<li>sm,</li>
-								<li>m,</li>
-								<li>l,</li>
-								<li>xl,</li>
-								<li>xxl</li>
-							</ul>
-						</span>
-                            </div>
-
-                            <!-- colors -->
-                            <div class="color-wrapper">
-                                <b>Colors</b>
-                                <br />
-                                <ul class="list-inline color-list">
-                                    <li class="color-list__item color-list__item--red"></li>
-                                    <li class="color-list__item color-list__item--blue"></li>
-                                    <li class="color-list__item color-list__item--green"></li>
-                                    <li class="color-list__item color-list__item--orange"></li>
-                                    <li class="color-list__item color-list__item--purple"></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </article>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <article class="card-wrapper">
-                        <div class="image-holder">
-                            <a href="#" class="image-holder__link"></a>
-                            <div class="image-liquid image-holder--original" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b8/Columbia_Sportswear_Jacket.jpg')">
-                            </div>
-                        </div>
-
-                        <div class="product-description">
-                            <!-- title -->
-                            <h1 class="product-description__title">
-                                <a href="#">
-                                    Adidas Originals
-                                </a>
-                            </h1>
-
-                            <!-- category and price -->
-                            <div class="row">
-                                <div class="col-sm-8 product-description__category secondary-text">
-                                    Men's running shirt
-                                </div>
-                                <div class="col-sm-4 product-description__price text-right">
-                                    € 499
-                                </div>
-                            </div>
-
-                            <!-- divider -->
-                            <hr />
-
-                            <!-- sizes -->
-                            <div class="sizes-wrapper">
-                                <b>Sizes</b>
-                                <br />
-                                <span class="secondary-text text-uppercase">
-							<ul class="list-inline">
-								<li>xs,</li>
-								<li>s,</li>
-								<li>sm,</li>
-								<li>m,</li>
-								<li>l,</li>
-								<li>xl,</li>
-								<li>xxl</li>
-							</ul>
-						</span>
-                            </div>
-
-                            <!-- colors -->
-                            <div class="color-wrapper">
-                                <b>Colors</b>
-                                <br />
-                                <ul class="list-inline color-list">
-                                    <li class="color-list__item color-list__item--red"></li>
-                                    <li class="color-list__item color-list__item--blue"></li>
-                                    <li class="color-list__item color-list__item--green"></li>
-                                    <li class="color-list__item color-list__item--orange"></li>
-                                    <li class="color-list__item color-list__item--purple"></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </article>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <article class="card-wrapper">
-                        <div class="image-holder">
-                            <a href="#" class="image-holder__link"></a>
-                            <div class="image-liquid image-holder--original" style="background-image: url('http://www.publicdomainpictures.net/pictures/20000/nahled/red-shoes-isolated.jpg')">
-                            </div>
-                        </div>
-
-                        <div class="product-description">
-                            <!-- title -->
-                            <h1 class="product-description__title">
-                                <a href="#">
-                                    Adidas Originals
-                                </a>
-                            </h1>
-
-                            <!-- category and price -->
-                            <div class="row">
-                                <div class="col-sm-8 product-description__category secondary-text">
-                                    Men's running shirt
-                                </div>
-                                <div class="col-sm-4 product-description__price text-right">
-                                    € 499
-                                </div>
-                            </div>
-
-                            <!-- divider -->
-                            <hr />
-
-                            <!-- sizes -->
-                            <div class="sizes-wrapper">
-                                <b>Sizes</b>
-                                <br />
-                                <span class="secondary-text text-uppercase">
-							<ul class="list-inline">
-								<li>xs,</li>
-								<li>s,</li>
-								<li>sm,</li>
-								<li>m,</li>
-								<li>l,</li>
-								<li>xl,</li>
-								<li>xxl</li>
-							</ul>
-						</span>
-                            </div>
-
-                            <!-- colors -->
-                            <div class="color-wrapper">
-                                <b>Colors</b>
-                                <br />
-                                <ul class="list-inline color-list">
-                                    <li class="color-list__item color-list__item--red"></li>
-                                    <li class="color-list__item color-list__item--blue"></li>
-                                    <li class="color-list__item color-list__item--green"></li>
-                                    <li class="color-list__item color-list__item--orange"></li>
-                                    <li class="color-list__item color-list__item--purple"></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </article>
-                </div>
             </div>
         </div>
     </main>
