@@ -72,8 +72,8 @@
                                             <tr>
                                                 <td><input type="text" name="size[]" placeholder="Enter size" class="form-control size_list" /></td>
                                                 <td> <input type="text" name="color[]" placeholder="Enter color" class="form-control color_list" /></td>
-                                                <td><input type="text" name="price[]" placeholder="Enter rice" class="form-control price_list" /></td>
-                                                <td><input type="text" name="quantity[]" placeholder="Enter quantity" class="form-control qunatity_list" /></td>
+                                                <td><input type="number" name="price[]" placeholder="Enter rice" class="form-control price_list" /></td>
+                                                <td><input type="number" name="quantity[]" placeholder="Enter quantity" class="form-control qunatity_list" /></td>
                                                 <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
                                             </tr>
                                         </table>
@@ -96,7 +96,7 @@
 
                 $('#add').click(function(){
                     i++;
-                    $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="size[]" placeholder="Enter size" class="form-control size_list" /></td><td> <input type="text" name="color[]" placeholder="Enter color" class="form-control color_list" /></td><td><input type="text" name="price[]" placeholder="Enter rice" class="form-control price_list" /></td> <td><input type="text" name="quantity[]" placeholder="Enter quantity" class="form-control qunatity_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+                    $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="size[]" placeholder="Enter size" class="form-control size_list" /></td><td> <input type="text" name="color[]" placeholder="Enter color" class="form-control color_list" /></td><td><input type="number" name="price[]" placeholder="Enter rice" class="form-control price_list" /></td> <td><input type="number" name="quantity[]" placeholder="Enter quantity" class="form-control qunatity_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
                 });
 
 

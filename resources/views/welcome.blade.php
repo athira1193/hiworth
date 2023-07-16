@@ -7,194 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <title>HIWORTH</title>
     <style>
-        .navbar-top {
-            background-color: black;
-        }
-        .navbar-bottom {
-            background-color: white;
-        }
-        .footer {
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-        }
-        .footer-title{
-            color:white;
-        }
-        .title-column{
 
-            display: inline-block;
-            font-size: 50px;
-            border-bottom: 2px solid #0062cc;
-            padding-bottom: 4px;
-            color:#0062cc;
-            font-weight: bold;
-        }
-        .padding-style{
-            padding: 15px;
-        }
-        .section{
-            padding: 51px;
-            margin: 0;
-        }
-        .image-container {
-            position: relative;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-        }
-
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 20px;
-            width: 100%;
-        }
-
-        .overlay h2,
-        .overlay p {
-            margin: 0;
-        }
-        .violet-section {
-            background-color: #3c0069;
-            color: white;
-            padding: 50px 0;
-        }
-
-        .violet-section h2,
-        .violet-section p {
-            margin: 0;
-        }
-
-        .banner {
-            position: relative;
-            /*width: 100%;*/
-            height: 500px;
-        }
-
-        .banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .banner-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-        }
-
-        .banner-content h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        .banner-content p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-        }
-        .formBox{
-            /*margin-top: 90px;*/
-            /*padding: 50px;*/
-        }
-        .formBox  h1{
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            font-size: 48px;
-        }
-        .inputBox{
-            position: relative;
-            box-sizing: border-box;
-            margin-bottom: 50px;
-        }
-        .inputBox .inputText{
-            position: absolute;
-            /*font-size: 24px;*/
-            line-height: 50px;
-            transition: .5s;
-            opacity: .5;
-        }
-        .inputBox .input{
-            position: relative;
-            width: 100%;
-            height: 50px;
-            background: transparent;
-            border: none;
-            outline: none;
-            font-size: 24px;
-            border-bottom: 1px solid rgba(0,0,0,.5);
-
-        }
-        .focus .inputText{
-            transform: translateY(-30px);
-            font-size: 18px;
-            opacity: 1;
-            color: #00bcd4;
-
-        }
-        textarea{
-            height: 100px !important;
-        }
-        .button{
-            width: 100%;
-            height: 50px;
-            border: none;
-            outline: none;
-            background: #0062cc;
-            color: #fff;
-            margin: 10px;
-        }
-        .form-title{
-            font-weight: bold;
-        }
-        p{
-            justify-content: right;
-        }
-        .image-new {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card {
-            position: absolute;
-            bottom: -90px;
-            left: 53%;
-            transform: translateX(-50%);
-            width: 80%;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .content {
-            margin-bottom: 20px;
-        }
     </style>
 </head>
-<div>
+
 <nav class="navbar navbar-expand-lg navbar-top">
     <div class="container">
 
@@ -253,14 +73,46 @@
         </div>
     </div>
 </nav>
-    <div class="banner">
-        <img src="https://www.bayfuture.com/clientuploads/Mclaren_Bay_Region.jpg" alt="Banner Image">
-        <div class="banner-content">
-            <h2>Welcome to our website</h2>
-            <p>Explore our products and services</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
+
+    <div class="container">
+        <div class="row">
+            <div class="row no-gutters">
+            <div class="col-md-4 bg-blue">
+                <h2>About Our<br> City of Bay.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at bibendum lorem. Quisque pretium, nulla accumsan condimentum porttitor,</p>
+            </div>
+            <div class="col-md-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://www.w3schools.com/bootstrap5/ny.jpg" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www.w3schools.com/bootstrap5/chicago.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www.w3schools.com/bootstrap5/la.jpg" alt="Image 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
+
 
 <section class="section">
     <div class="container">
@@ -456,22 +308,27 @@
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">Contact Us</h3>
-                <p>123 Street, City</p>
-                <p>Email: info@example.com</p>
-                <p>Phone: 123-456-7890</p>
+                <p style="color:white;"><i class="fa fa-map-marker" style="color:white;" aria-hidden="true"></i>  City of Bay 220 Elder Street<br>P O Box 99 Bay, AR 72411, US</p>
+                <p style="color:white;"><i class="fa fa-phone" style="color:white;" aria-hidden="true"></i>   (870 781-3386)</p>
+                <p style="color:white;"><i class="fa fa-envelope" style="color:white;" aria-hidden="true"></i>  info@cityofbay.org</p>
             </div>
             <div class="col-md-4">
                 <h3 class="footer-title">Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" style="color:white;">Police</a></li>
+                    <li><a href="#" style="color:white;">Fire</a></li>
+                    <li><a href="#" style="color:white;">City Goverment</a></li>
+                    <li><a href="#" style="color:white;">Services</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
                 <h3 class="footer-title">Map</h3>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5363644662897!2d-73.98542828459344!3d40.74881797932894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25903d9f19bcb%3A0x9d8cb3edf1f1b5e4!2sTimes%20Square%2C%20New%20York%2C%20NY%2010018%2C%20USA!5e0!3m2!1sen!2sca!4v1611305468005!5m2!1sen!2sca" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p style="color: white;">&copy; {{ date("Y") }}  City of Bay. All rights reserved.</p>
             </div>
         </div>
     </div>

@@ -1,0 +1,189 @@
+.navbar-top {
+    background-color: black;
+}
+.navbar-bottom {
+    background-color: white;
+}
+.footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footer-title{
+    color:white;
+}
+.title-column{
+
+    display: inline-block;
+    font-size: 50px;
+    border-bottom: 2px solid #0062cc;
+    padding-bottom: 4px;
+    color:#0062cc;
+    font-weight: bold;
+}
+.padding-style{
+    padding: 15px;
+}
+.section{
+    padding: 51px;
+    margin: 0;
+}
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.overlay h2,
+.overlay p {
+    margin: 0;
+}
+.violet-section {
+    background-color: #3c0069;
+    color: white;
+    padding: 50px 0;
+}
+
+.violet-section h2,
+.violet-section p {
+    margin: 0;
+}
+
+.banner {
+    position: relative;
+    /*width: 100%;*/
+    height: 500px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.banner-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.formBox{
+    /*margin-top: 90px;*/
+    /*padding: 50px;*/
+}
+.formBox  h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.inputBox{
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+.inputBox .inputText{
+    position: absolute;
+    /*font-size: 24px;*/
+    line-height: 50px;
+    transition: .5s;
+    opacity: .5;
+}
+.inputBox .input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+
+}
+.focus .inputText{
+    transform: translateY(-30px);
+    font-size: 18px;
+    opacity: 1;
+    color: #00bcd4;
+
+}
+textarea{
+    height: 100px !important;
+}
+.button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: #0062cc;
+    color: #fff;
+    margin: 10px;
+}
+.form-title{
+    font-weight: bold;
+}
+p{
+    justify-content: right;
+}
+.image-new {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    position: absolute;
+    bottom: -90px;
+    left: 53%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    margin-bottom: 20px;
+}
+.bg-blue{
+    background-color: #0b5ed7;
+    text-align: center;
+    padding: 160px;
+    color: white;
+}
