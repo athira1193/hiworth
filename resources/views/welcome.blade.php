@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Bootstrap Template</title>
+    <title>HIWORTH</title>
     <style>
         .navbar-top {
             background-color: black;
@@ -233,6 +233,9 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url('products') }}">Products</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">City of goverment</a>
